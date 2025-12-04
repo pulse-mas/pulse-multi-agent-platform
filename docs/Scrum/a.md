@@ -1,7 +1,9 @@
 # 📊 Pulse Multi-Agent Platform - Work Breakdown Structure
 
+## Project Overview
+
 ```mermaid
-graph TD
+graph LR
     Project[Pulse Multi-Agent Platform]
     
     Project --> S0[Sprint 0: Planning]
@@ -9,229 +11,263 @@ graph TD
     Project --> S2[Sprint 2: Analytics]
     Project --> S3[Sprint 3: Autonomous]
     Project --> Infra[Infrastructure]
+```
+
+---
+
+## Sprint 0: Planning Phase
+
+```mermaid
+graph LR
+    S0[Sprint 0: Planning]
     
-    S0 --> S0A[User Stories]
-    S0 --> S0B[Architecture]
-    S0 --> S0C[POCs]
-    S0 --> S0D[GitHub Projects]
+    S0 --> Stories[User Stories]
+    S0 --> Arch[Architecture]
+    S0 --> POC[POCs]
+    S0 --> Board[GitHub Projects]
     
-    S0A --> S0A1[Write 15+ Stories]
-    S0A --> S0A2[Story Estimation]
-    S0A --> S0A3[MoSCoW Priority]
+    Stories --> ST1[Write 15+ Stories]
+    Stories --> ST2[Story Estimation]
+    Stories --> ST3[MoSCoW Priority]
     
-    S0B --> S0B1[Agent Architecture]
-    S0B --> S0B2[Database Schema]
-    S0B --> S0B3[API Specifications]
+    Arch --> AR1[Agent Architecture]
+    Arch --> AR2[Database Schema]
+    Arch --> AR3[API Specifications]
     
-    S0C --> S0C1[CrewAI POC]
-    S0C --> S0C2[RAG POC]
-    S0C --> S0C3[Sentiment POC]
-    S0C --> S0C4[Docker POC]
+    POC --> POC1[CrewAI POC]
+    POC --> POC2[RAG POC]
+    POC --> POC3[Sentiment POC]
+    POC --> POC4[Docker POC]
     
-    S0D --> S0D1[Board Columns]
-    S0D --> S0D2[Labels]
-    S0D --> S0D3[Milestones]
+    Board --> BD1[Board Columns]
+    Board --> BD2[Labels]
+    Board --> BD3[Milestones]
+```
+
+---
+
+## Sprint 1: Core AI Framework
+
+```mermaid
+graph LR
+    S1[Sprint 1: Core AI]
     
-    S1 --> US001[Agent Framework]
-    S1 --> US002[Brand RAG]
-    S1 --> US003[Campaign Planner]
-    S1 --> US010[Brand DNA]
-    S1 --> US014[CI/CD Pipeline]
+    S1 --> US001[US-001: Agent Framework]
+    S1 --> US002[US-002: Brand RAG]
+    S1 --> US003[US-003: Campaign Planner]
+    S1 --> US010[US-010: Brand DNA]
+    S1 --> US014[US-014: CI/CD Pipeline]
     
-    US001 --> US001A[CrewAI Setup]
-    US001 --> US001B[Agent Memory]
-    US001 --> US001C[Task Orchestration]
+    US001 --> A1[CrewAI Setup]
+    US001 --> A2[Agent Memory]
+    US001 --> A3[Task Orchestration]
+    US001 --> A4[Agent Tests]
     
-    US002 --> US002A[Doc Upload API]
-    US002 --> US002B[Embedding Pipeline]
-    US002 --> US002C[Vector DB]
+    US002 --> B1[Doc Upload API]
+    US002 --> B2[Embedding Pipeline]
+    US002 --> B3[Vector DB Setup]
+    US002 --> B4[RAG Query]
     
-    US003 --> US003A[Campaign Form]
-    US003 --> US003B[Strategy Agent]
+    US003 --> C1[Campaign Form UI]
+    US003 --> C2[Campaign API]
+    US003 --> C3[Strategy Agent]
     
-    US010 --> US010A[Visual DNA]
-    US010 --> US010B[Linguistic DNA]
+    US010 --> D1[Visual DNA Extract]
+    US010 --> D2[Linguistic Analysis]
+    US010 --> D3[DNA Dashboard]
     
-    US014 --> US014A[GitHub Actions]
-    US014 --> US014B[AI Model Tests]
+    US014 --> E1[GitHub Actions]
+    US014 --> E2[AI Model Tests]
+    US014 --> E3[Staging Deploy]
+```
+
+---
+
+## Sprint 2: Analytics & Scheduling
+
+```mermaid
+graph LR
+    S2[Sprint 2: Analytics]
     
-    S2 --> US004[Content Scheduler]
-    S2 --> US005[Sentiment Dashboard]
-    S2 --> US007[Message Inbox]
-    S2 --> US011[Hallucination Detector]
-    S2 --> US015[Rate Limiter]
+    S2 --> US004[US-004: Content Scheduler]
+    S2 --> US005[US-005: Sentiment Dashboard]
+    S2 --> US007[US-007: Message Inbox]
+    S2 --> US011[US-011: Hallucination Detector]
+    S2 --> US015[US-015: Rate Limiter]
     
-    US004 --> US004A[Calendar UI]
-    US004 --> US004B[Optimal Time AI]
-    US004 --> US004C[Auto-Publish]
+    US004 --> F1[Calendar UI]
+    US004 --> F2[Optimal Time AI]
+    US004 --> F3[Auto-Publish Jobs]
     
-    US005 --> US005A[Sentiment Model]
-    US005 --> US005B[Charts]
-    US005 --> US005C[Alerts]
+    US005 --> G1[Sentiment Model]
+    US005 --> G2[Dashboard Charts]
+    US005 --> G3[Sentiment Alerts]
     
-    US007 --> US007A[Unified Inbox]
-    US007 --> US007B[AI Priority]
+    US007 --> H1[Unified Inbox UI]
+    US007 --> H2[AI Prioritization]
+    US007 --> H3[API Polling]
     
-    US011 --> US011A[Claim Extraction]
-    US011 --> US011B[KB Verification]
+    US011 --> I1[Claim Extraction]
+    US011 --> I2[KB Verification]
+    US011 --> I3[Brand Consistency]
     
-    US015 --> US015A[Token Bucket]
-    US015 --> US015B[Priority Queue]
+    US015 --> J1[Token Bucket]
+    US015 --> J2[Priority Queue]
+    US015 --> J3[Redis Caching]
+```
+
+---
+
+## Sprint 3: Autonomous Content
+
+```mermaid
+graph LR
+    S3[Sprint 3: Autonomous]
     
-    S3 --> US006[Anomaly Detection]
-    S3 --> US008[AI Responses]
-    S3 --> US009[Trend Content]
-    S3 --> US012[Human-in-Loop]
-    S3 --> US013[Model Monitoring]
+    S3 --> US006[US-006: Anomaly Detection]
+    S3 --> US008[US-008: AI Responses]
+    S3 --> US009[US-009: Trend Content]
+    S3 --> US012[US-012: Human-in-Loop]
+    S3 --> US013[US-013: Model Monitoring]
     
-    US006 --> US006A[Z-Score Algorithm]
-    US006 --> US006B[Alert System]
+    US006 --> K1[Z-Score Algorithm]
+    US006 --> K2[Alert System]
+    US006 --> K3[Anomaly Dashboard]
     
-    US008 --> US008A[Response Generator]
-    US008 --> US008B[Brand Voice]
+    US008 --> L1[Response Generator]
+    US008 --> L2[Brand Voice Match]
+    US008 --> L3[Feedback Loop]
     
-    US009 --> US009A[Trend Discovery]
-    US009 --> US009B[Post Generation]
+    US009 --> M1[Trend Discovery]
+    US009 --> M2[Post Generation]
+    US009 --> M3[Content Validation]
     
-    US012 --> US012A[Routing Logic]
-    US012 --> US012B[Review Queue]
+    US012 --> N1[Routing Logic]
+    US012 --> N2[Review Queue UI]
+    US012 --> N3[Learning Loop]
     
-    US013 --> US013A[Prometheus]
-    US013 --> US013B[Grafana]
+    US013 --> O1[Prometheus Metrics]
+    US013 --> O2[Grafana Dashboard]
+    US013 --> O3[A/B Testing]
+```
+
+---
+
+## Infrastructure Components
+
+```mermaid
+graph LR
+    Infra[Infrastructure]
     
     Infra --> Backend[FastAPI Backend]
     Infra --> Frontend[React Dashboard]
     Infra --> Data[Data Layer]
     Infra --> External[External APIs]
     
-    Backend --> BE1[REST API]
-    Backend --> BE2[JWT Auth]
+    Backend --> BE1[REST API Gateway]
+    Backend --> BE2[JWT Authentication]
     Backend --> BE3[Job Scheduler]
+    Backend --> BE4[Rate Limiter]
     
-    Frontend --> FE1[Dashboard]
-    Frontend --> FE2[Charts]
-    Frontend --> FE3[Forms]
+    Frontend --> FE1[Dashboard Views]
+    Frontend --> FE2[Chart Components]
+    Frontend --> FE3[Form Components]
+    Frontend --> FE4[Inbox Components]
     
-    Data --> D1[MongoDB]
-    Data --> D2[Pinecone]
-    Data --> D3[Redis]
+    Data --> D1[MongoDB Database]
+    Data --> D2[Pinecone Vector DB]
+    Data --> D3[Redis Cache]
     
-    External --> E1[Meta API]
+    External --> E1[Meta Graph API]
     External --> E2[LinkedIn API]
-    External --> E3[X API]
+    External --> E3[X Platform API]
     External --> E4[OpenAI API]
-    
-    S0C1 -->|validates| US001
-    S0C2 -->|validates| US002
-    S0C3 -->|validates| US005
-    S0C4 -->|validates| US014
-    
-    US001 -->|enables| US003
-    US001 -->|enables| US008
-    US001 -->|enables| US009
-    
-    US002 -->|feeds| US011
-    US002 -->|feeds| US008
-    
-    US010 -->|feeds| US011
-    US005 -->|triggers| US006
-    US011 -->|protects| US012
-    US009 -->|requires| US012
 ```
 
 ---
+
+## AI/ML Components
 
 ```mermaid
 graph LR
-    subgraph Agents[AI Agents]
-        A1[Marketing Strategist]
-        A2[Social Analyst]
-        A3[Customer Relations]
-        A4[Content Engine]
-    end
+    AIML[AI/ML Layer]
     
-    subgraph Models[ML Models]
-        M1[Sentiment Analysis]
-        M2[Named Entity Recognition]
-        M3[Brand Voice Scorer]
-        M4[Anomaly Detector]
-    end
+    AIML --> Agents[AI Agents]
+    AIML --> Models[ML Models]
+    AIML --> LLM[LLM Integration]
     
-    subgraph Services[Backend Services]
-        S1[FastAPI Server]
-        S2[RAG Pipeline]
-        S3[Job Scheduler]
-        S4[Rate Limiter]
-    end
+    Agents --> AG1[Marketing Strategist]
+    Agents --> AG2[Social Analyst]
+    Agents --> AG3[Customer Relations]
+    Agents --> AG4[Content Engine]
     
-    subgraph Storage[Data Layer]
-        D1[MongoDB]
-        D2[Pinecone Vector DB]
-        D3[Redis Cache]
-    end
+    Models --> MD1[Sentiment Analysis]
+    Models --> MD2[Named Entity Recognition]
+    Models --> MD3[Brand Voice Scorer]
+    Models --> MD4[Anomaly Detector]
     
-    subgraph External[External APIs]
-        E1[OpenAI]
-        E2[Meta]
-        E3[LinkedIn]
-        E4[X Platform]
-    end
-    
-    A1 --> S1
-    A2 --> M1
-    A3 --> S2
-    A4 --> M3
-    
-    S1 --> D1
-    S2 --> D2
-    S3 --> D3
-    S4 --> E1
-    S4 --> E2
-    S4 --> E3
-    S4 --> E4
-    
-    M1 --> D1
-    M4 --> D1
+    LLM --> LL1[Prompt Engineering]
+    LLM --> LL2[RAG Retrieval]
+    LLM --> LL3[Response Caching]
+    LLM --> LL4[Cost Optimization]
 ```
 
 ---
 
+## Team Responsibilities
+
 ```mermaid
-graph TD
-    subgraph Team[Team Responsibilities]
-        T1[Abdelrahman Elattar]
-        T2[Abdelrahman Omar]
-        T3[Rana Mahmoud]
-        T4[Hager Saad]
-    end
+graph LR
+    Team[Team]
     
-    T1 --> R1[Product Owner]
-    T1 --> R1A[AI/ML Lead]
-    R1 --> W1[Feature Prioritization]
-    R1A --> W2[Agent Architecture]
-    R1A --> W3[LLM Integration]
-    R1A --> W4[Prompt Engineering]
+    Team --> T1[Abdelrahman Elattar]
+    Team --> T2[Abdelrahman Omar]
+    Team --> T3[Rana Mahmoud]
+    Team --> T4[Hager Saad]
     
-    T2 --> R2[Product Owner]
-    T2 --> R2A[Backend AI Lead]
-    R2 --> W5[Backlog Refinement]
-    R2A --> W6[RAG Pipeline]
-    R2A --> W7[FastAPI Services]
-    R2A --> W8[Vector Database]
+    T1 --> R1A[Product Owner]
+    T1 --> R1B[AI/ML Lead]
+    R1B --> W1[Agent Architecture]
+    R1B --> W2[LLM Integration]
     
-    T3 --> R3[Scrum Master]
-    T3 --> R3A[Analytics Lead]
-    R3 --> W9[Sprint Ceremonies]
-    R3A --> W10[Sentiment Model]
-    R3A --> W11[Analytics Dashboard]
-    R3A --> W12[Frontend Components]
+    T2 --> R2A[Product Owner]
+    T2 --> R2B[Backend AI Lead]
+    R2B --> W3[RAG Pipeline]
+    R2B --> W4[FastAPI Services]
     
-    T4 --> R4[Scrum Master]
-    T4 --> R4A[DevOps Lead]
-    R4 --> W13[Blocker Removal]
-    R4A --> W14[CI/CD Pipeline]
-    R4A --> W15[Model Deployment]
-    R4A --> W16[AI Testing Framework]
+    T3 --> R3A[Scrum Master]
+    T3 --> R3B[Analytics Lead]
+    R3B --> W5[Sentiment Model]
+    R3B --> W6[Frontend Dashboard]
+    
+    T4 --> R4A[Scrum Master]
+    T4 --> R4B[DevOps Lead]
+    R4B --> W7[CI/CD Pipeline]
+    R4B --> W8[Model Deployment]
+```
+
+---
+
+## Dependencies
+
+```mermaid
+graph LR
+    POC1[CrewAI POC] -->|validates| US001[Agent Framework]
+    POC2[RAG POC] -->|validates| US002[Brand RAG]
+    POC3[Sentiment POC] -->|validates| US005[Sentiment Dashboard]
+    POC4[Docker POC] -->|validates| US014[CI/CD Pipeline]
+    
+    US001 -->|enables| US003[Campaign Planner]
+    US001 -->|enables| US008[AI Responses]
+    US001 -->|enables| US009[Trend Content]
+    
+    US002 -->|feeds| US011[Hallucination Detector]
+    US002 -->|feeds| US008
+    
+    US010[Brand DNA] -->|feeds| US011
+    US005 -->|triggers| US006[Anomaly Detection]
+    US011 -->|protects| US012[Human-in-Loop]
+    US009 -->|requires| US012
 ```
 
 ---
