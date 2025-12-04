@@ -1,3 +1,5 @@
+````markdown
+```mermaid
 graph TD
     %% Level 1 - Project Root
     Project["🚀 Pulse Multi-Agent Platform"]
@@ -19,7 +21,6 @@ graph TD
         S0_Env["Environment<br/>Setup"]
         S0_Board["GitHub Projects<br/>Configuration"]
 
-        %% Level 4 - Sprint 0 Work Packages
         S0_Stories --> S0_US_Write["Write 15+ Stories"]
         S0_Stories --> S0_US_Est["Story Estimation"]
         S0_Stories --> S0_US_Priority["MoSCoW Prioritization"]
@@ -49,7 +50,6 @@ graph TD
         S1_US010["US-010<br/>Brand DNA"]
         S1_US014["US-014<br/>CI/CD Pipeline"]
 
-        %% Level 4 - Sprint 1 Work Packages
         S1_US001 --> S1_001_Crew["CrewAI Setup"]
         S1_US001 --> S1_001_Memory["Agent Memory"]
         S1_US001 --> S1_001_Orch["Task Orchestration"]
@@ -80,7 +80,6 @@ graph TD
         S2_US011["US-011<br/>Hallucination Detector"]
         S2_US015["US-015<br/>Rate Limiter"]
 
-        %% Level 4 - Sprint 2 Work Packages
         S2_US004 --> S2_004_Calendar["Calendar UI"]
         S2_US004 --> S2_004_Optimal["Optimal Time AI"]
         S2_US004 --> S2_004_Publish["Auto-Publish Jobs"]
@@ -109,7 +108,6 @@ graph TD
         S3_US012["US-012<br/>Human-in-Loop"]
         S3_US013["US-013<br/>Model Monitoring"]
 
-        %% Level 4 - Sprint 3 Work Packages
         S3_US006 --> S3_006_Zscore["Z-Score Algorithm"]
         S3_US006 --> S3_006_Notify["Alert System"]
         S3_US006 --> S3_006_Log["Anomaly Dashboard"]
@@ -157,108 +155,5 @@ graph TD
 
     subgraph AIML["🧠 AI/ML Foundations"]
         AI_Agents["AI Agents"]
-        AI_Models["ML Models"]
-        AI_LLM["LLM Integration"]
-
-        AI_Agents --> AI_Agent_Strat["Marketing Strategist"]
-        AI_Agents --> AI_Agent_Social["Social Analyst"]
-        AI_Agents --> AI_Agent_CRM["Customer Relations"]
-        AI_Agents --> AI_Agent_Content["Content Engine"]
-
-        AI_Models --> AI_Model_Sent["Sentiment Model"]
-        AI_Models --> AI_Model_NER["NER Model"]
-        AI_Models --> AI_Model_Brand["Brand Scorer"]
-
-        AI_LLM --> AI_LLM_Prompt["Prompt Engineering"]
-        AI_LLM --> AI_LLM_RAG["RAG Retrieval"]
-        AI_LLM --> AI_LLM_Cache["Response Caching"]
-    end
-
-    subgraph CICD["⚙️ CI/CD & Quality"]
-        QA_Pipeline["Pipeline Stages"]
-        QA_Testing["Testing Suites"]
-        QA_Deploy["Deployment"]
-
-        QA_Pipeline --> QA_Lint["Linting"]
-        QA_Pipeline --> QA_Unit["Unit Tests"]
-        QA_Pipeline --> QA_AITest["AI Model Tests"]
-        QA_Pipeline --> QA_Security["Security Scan"]
-
-        QA_Testing --> QA_Test_Sent["Sentiment Accuracy"]
-        QA_Testing --> QA_Test_Hall["Hallucination Tests"]
-        QA_Testing --> QA_Test_Brand["Brand Consistency"]
-
-        QA_Deploy --> QA_Deploy_Stage["Staging"]
-        QA_Deploy --> QA_Deploy_Roll["Rollback"]
-        QA_Deploy --> QA_Deploy_Notify["Slack Alerts"]
-    end
-
-    subgraph Docs["📚 Documentation"]
-        Doc_Arch["Architecture Docs"]
-        Doc_API["API Specs"]
-        Doc_Guide["Dev Guides"]
-        Doc_Risk["Risk Management"]
-
-        Doc_Arch --> Doc_Arch_Sys["System Diagram"]
-        Doc_Arch --> Doc_Arch_Data["Data Flow"]
-        Doc_Arch --> Doc_Arch_Agent["Agent Protocols"]
-
-        Doc_API --> Doc_API_Swagger["OpenAPI Spec"]
-        Doc_API --> Doc_API_Auth["Auth Flow"]
-        Doc_API --> Doc_API_Rate["Rate Limits"]
-
-        Doc_Guide --> Doc_Guide_Setup["Setup Guide"]
-        Doc_Guide --> Doc_Guide_Learn["AI Learning Plan"]
-        Doc_Guide --> Doc_Guide_Contrib["Contribution Guide"]
-
-        Doc_Risk --> Doc_Risk_Log["Risk Log"]
-        Doc_Risk --> Doc_Risk_Mit["Mitigations"]
-        Doc_Risk --> Doc_Risk_Monitor["Monitoring"]
-    end
-
-    subgraph Team["👥 Team Responsibilities"]
-        Team_Elattar["Abdelrahman Elattar<br/>PO + AI/ML Lead"]
-        Team_Omar["Abdelrahman Omar<br/>PO + Backend AI Lead"]
-        Team_Rana["Rana Mahmoud<br/>SM + Analytics Lead"]
-        Team_Hager["Hager Saad<br/>SM + DevOps Lead"]
-    end
-
-    %% Cross-Dependencies
-    S0_POC_Crew -->|validates| S1_US001
-    S0_POC_RAG -->|validates| S1_US002
-    S0_POC_Sent -->|validates| S2_US005
-    S0_POC_Deploy -->|validates| S1_US014
-
-    S1_US001 -->|enables| S1_US003
-    S1_US001 -->|enables| S3_US008
-    S1_US001 -->|enables| S3_US009
-
-    S1_US002 -->|feeds| S2_US011
-    S1_US002 -->|feeds| S3_US008
-    S1_US010 -->|feeds| S2_US011
-
-    S2_US005 -->|triggers| S3_US006
-    S2_US011 -->|protects| S3_US012
-
-    S3_US009 -->|requires| S3_US012
-
-    %% Team to Components
-    Team_Elattar -.->|owns| AI_Agents
-    Team_Omar -.->|owns| CC_Backend
-    Team_Rana -.->|owns| AI_Models
-    Team_Hager -.->|owns| CICD
-
-    %% Styling
-    classDef sprint0 fill:#818cf8,stroke:#6366f1,color:#fff
-    classDef sprint1 fill:#34d399,stroke:#10b981,color:#fff
-    classDef sprint2 fill:#fbbf24,stroke:#f59e0b,color:#000
-    classDef sprint3 fill:#f87171,stroke:#ef4444,color:#fff
-    classDef infra fill:#64748b,stroke:#475569,color:#fff
-    classDef team fill:#a78bfa,stroke:#8b5cf6,color:#fff
-
-    class S0_Stories,S0_Arch,S0_POC,S0_Env,S0_Board sprint0
-    class S1_US001,S1_US002,S1_US003,S1_US010,S1_US014 sprint1
-    class S2_US004,S2_US005,S2_US007,S2_US011,S2_US015 sprint2
-    class S3_US006,S3_US008,S3_US009,S3_US012,S3_US013 sprint3
-    class CC_Backend,CC_Frontend,CC_Data,CC_External infra
-    class Team_Elattar,Team_Omar,Team_Rana,Team_Hager team
+        AI_Models["
+````
