@@ -46,16 +46,54 @@
 ## 2. Team Roles & AI/ML Responsibilities
 
 > [!NOTE]
-> **All team members work on AI/ML tasks** - this is a core requirement. Each member combines their primary role with hands-on AI/ML development responsibilities.
+> **All team members are AI Engineers** working on AI/ML/NLP tasks. Each member combines their primary role with hands-on AI/ML development responsibilities across all sprints.
 
 ### Role Distribution
 
 | Team Member | Primary Roles | AI/ML Focus Area | Sprint 0 Responsibilities |
 |------------|---------------|------------------|---------------------------|
-| **Abdelrahman Elattar** | **Product Owner** + **AI/ML Lead** | Agent orchestration, LLM integration, prompt engineering | • Prioritize AI features in backlog<br>• Stakeholder communication<br>• Design CrewAI agent architecture<br>• Create AI agent user stories<br>• Define agent communication protocols |
-| **Abdelrahman Omar** | **Product Owner** + **Backend AI Integration Lead** | AI API infrastructure, vector databases, RAG implementation | • Refine backend AI requirements<br>• Design FastAPI endpoints for AI services<br>• Set up MongoDB + vector database<br>• Implement RAG pipeline for brand knowledge<br>• Define API specifications for agent communication |
-| **Rana Mahmoud** | **Scrum Master** + **AI Analytics & Frontend Lead** | ML analytics models, sentiment analysis, predictive algorithms | • Lead sprint ceremonies<br>• Track team velocity<br>• Design AI-powered analytics dashboard<br>• Implement sentiment analysis pipeline<br>• Build React components for AI insights |
-| **Hager Saad** | **Scrum Master** + **AI DevOps & Testing Lead** | Model deployment, AI monitoring, automated testing | • Remove AI development blockers<br>• Set up MLOps pipeline<br>• Configure CI/CD for AI model deployment<br>• Create AI model testing framework<br>• Set up AI performance monitoring |
+| **Abdelrahman Elattar** | **Product Owner** + **Multi-Agent Systems Lead** | Agent Orchestration & LLM Integration | • Prioritize AI features in backlog<br>• Design CrewAI multi-agent architecture<br>• Define agent memory systems<br>• Create LLM prompt templates<br>• Define agent communication protocols |
+| **Abdelrahman Omar** | **Product Owner** + **RAG & NLP Lead** | Knowledge Retrieval & NLP Models | • Refine backend AI requirements<br>• Design RAG pipeline architecture (LangChain)<br>• Set up vector embeddings (OpenAI Ada-002)<br>• Implement semantic search algorithms<br>• Define knowledge base conflict resolution |
+| **Rana Mahmoud** | **Scrum Master** + **ML Analytics Lead** | Sentiment Analysis & ML Models | • Lead sprint ceremonies<br>• Design sentiment classification model<br>• Implement engagement prediction ML<br>• Build real-time analytics inference pipeline<br>• Create ML model evaluation metrics |
+| **Hager Saad** | **Scrum Master** + **Content Generation & NER Lead** | Generative AI & Entity Recognition | • Remove AI development blockers<br>• Design AI content generation prompts<br>• Implement Named Entity Recognition (NER)<br>• Build brand voice matching models<br>• Create hallucination detection system |
+
+### 🧠 AI/ML Work Distribution
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    PULSE AI/ML COMPONENTS                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  ┌──────────────────┐    ┌──────────────────┐                           │
+│  │ ABDELRAHMAN E.   │    │ ABDELRAHMAN O.   │                           │
+│  │ Agent & LLM      │    │ RAG & Retrieval  │                           │
+│  ├──────────────────┤    ├──────────────────┤                           │
+│  │ • CrewAI Agents  │    │ • RAG Pipeline   │                           │
+│  │ • Prompt Eng.    │    │ • Vector Search  │                           │
+│  │ • Agent Memory   │    │ • Embeddings     │                           │
+│  │ • Task Routing   │    │ • Semantic Rank  │                           │
+│  │ • LLM Chains     │    │ • Query NLP      │                           │
+│  └──────────────────┘    └──────────────────┘                           │
+│                                                                          │
+│  ┌──────────────────┐    ┌──────────────────┐                           │
+│  │   RANA M.        │    │   HAGER S.       │                           │
+│  │   Analytics ML   │    │   Gen AI & NER   │                           │
+│  ├──────────────────┤    ├──────────────────┤                           │
+│  │ • Sentiment AI   │    │ • Content Gen.   │                           │
+│  │ • Anomaly Det.   │    │ • NER Models     │                           │
+│  │ • Trend Predict  │    │ • Brand Voice AI │                           │
+│  │ • Time Series    │    │ • Summarization  │                           │
+│  │ • Engagement ML  │    │ • Hallucination  │                           │
+│  └──────────────────┘    └──────────────────┘                           │
+│                                                                          │
+│  ┌─────────────────────────────────────────────────────────────────┐    │
+│  │              SHARED (End of Project - All Team)                  │    │
+│  ├─────────────────────────────────────────────────────────────────┤    │
+│  │ • Model Deployment • ML Monitoring • A/B Testing • Model Drift  │    │
+│  └─────────────────────────────────────────────────────────────────┘    │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+```
 
 ### Role Details
 
@@ -264,7 +302,7 @@ Using **Fibonacci sequence**: 1, 2, 3, 5, 8, 13, 21
 - **Abdelrahman Elattar:** CrewAI agent communication test
 - **Abdelrahman Omar:** RAG pipeline with brand knowledge
 - **Rana Mahmoud:** Sentiment analysis model integration
-- **Hager Saad:** Model deployment to Docker container
+- **Hager Saad:** NER model for brand entity extraction + AI content generation prompts
 
 #### ✅ End-of-Week Goals (Dec 4-5)
 
@@ -351,21 +389,25 @@ By **December 5, 2025**, the team will deliver:
 
 Each team member presents a working POC:
 
-**Abdelrahman Elattar (Product Owner + AI/ML Lead):**
+**Abdelrahman Elattar (Product Owner + Multi-Agent Systems Lead):**
 - CrewAI agent communication: 2 agents collaborate on task
 - Example: Marketing Strategist → Content Engine handoff
+- LLM prompt templates for agent tasks
 
-**Abdelrahman Omar (Product Owner + Backend AI Integration Lead):**
+**Abdelrahman Omar (Product Owner + RAG & NLP Lead):**
 - RAG pipeline: Upload PDF, query brand knowledge, retrieve relevant chunks
 - MongoDB + vector database integration working
+- Semantic search with reranking
 
-**Rana Mahmoud (Scrum Master + AI Analytics & Frontend Lead):**
+**Rana Mahmoud (Scrum Master + ML Analytics Lead):**
 - Sentiment analysis: Analyze 10 sample posts, display results in React dashboard
 - Real-time chart updates
+- Engagement prediction model prototype
 
-**Hager Saad (Scrum Master + AI DevOps & Testing Lead):**
-- Model deployment: Sentiment model in Docker container
-- API endpoint responds within 2 seconds
+**Hager Saad (Scrum Master + Content Generation & NER Lead):**
+- NER model: Extract brand entities from 20 sample texts
+- AI content generation: Generate 5 social posts with brand voice
+- Hallucination detection prototype
 
 ### 5. Sprint 1 Readiness ✅
 
@@ -873,7 +915,7 @@ def validate_content(content: str, brand_id: str) -> dict:
 
 **Dependencies:** NER model (spaCy), RAG system, brand DNA
 
-**Assigned To:** Hager Saad (Testing framework), Abdelrahman Elattar (Validation logic) - to be implemented in Sprint 2
+**Assigned To:** Hager Saad (Lead - NER & Hallucination Detection), Abdelrahman Omar (Knowledge base verification) - to be implemented in Sprint 2
 
 ---
 
@@ -1087,25 +1129,30 @@ Since **all team members work on AI/ML tasks**, this section outlines learning r
 
 ### 📚 Role-Specific Learning Tracks
 
-#### Abdelrahman Elattar (Product Owner + AI/ML Lead)
+#### Abdelrahman Elattar (Product Owner + Multi-Agent Systems Lead)
 - Advanced CrewAI patterns (hierarchical agents, custom tools)
-- Agent orchestration strategies
-- Prompt optimization and A/B testing
+- Agent memory systems (short-term + long-term)
+- LLM prompt optimization and chain-of-thought
+- GPT-4/Claude integration best practices
 
-#### Abdelrahman Omar (Product Owner + Backend AI Integration Lead)
+#### Abdelrahman Omar (Product Owner + RAG & NLP Lead)
 - Vector database optimization (Pinecone/Qdrant)
-- RAG pipeline best practices
-- FastAPI + async patterns for AI services
+- RAG pipeline best practices (chunking, reranking)
+- Semantic search algorithms
+- Query understanding and expansion NLP
 
-#### Rana Mahmoud (Scrum Master + AI Analytics & Frontend Lead)
-- Hugging Face Transformers library
+#### Rana Mahmoud (Scrum Master + ML Analytics Lead)
+- Hugging Face Transformers (BERT/RoBERTa)
 - Sentiment analysis model fine-tuning
-- Real-time ML inference in web apps
+- Time series analysis for engagement prediction
+- Anomaly detection algorithms (Isolation Forest, Z-score)
 
-#### Hager Saad (Scrum Master + AI DevOps & Testing Lead)
-- MLOps best practices (model versioning, drift detection)
-- AI model testing strategies
-- Containerized model deployment
+#### Hager Saad (Scrum Master + Content Generation & NER Lead)
+- SpaCy NER model training and fine-tuning
+- Text generation with GPT (T5, BART)
+- Brand voice matching and style transfer
+- Hallucination detection and claim verification
+- Text summarization techniques
 
 ### 📅 Weekly Learning Sessions
 
@@ -1114,7 +1161,7 @@ Since **all team members work on AI/ML tasks**, this section outlines learning r
 | Week 1 | CrewAI Fundamentals & Agent Creation | Abdelrahman Elattar |
 | Week 2 | RAG & Vector Databases | Abdelrahman Omar |
 | Week 3 | Sentiment Analysis & ML Models | Rana Mahmoud |
-| Week 4 | MLOps & Model Deployment | Hager Saad |
+| Week 4 | NER, Content Generation & Hallucination Detection | Hager Saad |
 
 ### 🎯 Learning Goals by End of Sprint 1
 
@@ -1189,10 +1236,10 @@ A user story is marked "Done" when:
 | Story | Points | Owner |
 |-------|--------|-------|
 | US-004: Multi-Platform Content Scheduler | 13 | Abdelrahman O. + Rana M. |
-| US-005: Real-Time Sentiment Dashboard | 8 | Rana M. + Hager S. |
-| US-007: Unified Message Inbox | 8 | Abdelrahman O. + Rana M. |
-| US-011: AI Hallucination Detection | 13 | Hager S. + Abdelrahman E. |
-| US-015: API Rate Limit Manager | 5 | Hager S. + Abdelrahman O. |
+| US-005: Real-Time Sentiment Dashboard | 8 | Rana M. (Lead) |
+| US-007: Unified Message Inbox | 8 | Abdelrahman O. + Hager S. |
+| US-011: AI Hallucination Detection | 13 | Hager S. (Lead - NER) + Abdelrahman O. |
+| US-015: API Rate Limit Manager | 5 | All Team (Shared) |
 
 **Demo:** Schedule post, view sentiment dashboard, receive anomaly alert
 
@@ -1203,11 +1250,11 @@ A user story is marked "Done" when:
 
 | Story | Points | Owner |
 |-------|--------|-------|
-| US-006: Anomaly Detection with ML | 8 | Rana M. + Hager S. |
-| US-008: AI Response Suggestions | 13 | Abdelrahman E. + Abdelrahman O. |
-| US-009: Trend-Based Content Generation | 13 | Abdelrahman E. + Abdelrahman O. |
+| US-006: Anomaly Detection with ML | 8 | Rana M. (Lead) |
+| US-008: AI Response Suggestions | 13 | Abdelrahman E. + Hager S. (Content Gen) |
+| US-009: Trend-Based Content Generation | 13 | Hager S. (Lead - Gen AI) + Abdelrahman E. |
 | US-012: Human-in-the-Loop Approval | 8 | Abdelrahman O. + Rana M. |
-| US-013: AI Model Performance Monitoring | 5 | Hager S. + Abdelrahman O. |
+| US-013: AI Model Performance Monitoring | 5 | All Team (Shared) |
 
 **Demo:** AI generates trending posts, routes to approval queue, publishes after review
 
