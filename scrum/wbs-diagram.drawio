@@ -1,0 +1,326 @@
+<mxfile host="app.diagrams.net" modified="2025-12-05T19:00:00.000Z" agent="Mozilla/5.0" version="22.1.0" type="device">
+  <diagram id="detailed-wbs-pulse-v2" name="Complete WBS">
+    <mxGraphModel dx="5000" dy="5000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="6000" pageHeight="4000" math="0" shadow="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- STYLES -->
+        <mxCell id="style_root" value="rounded=1;whiteSpace=wrap;html=1;fontSize=24;fontStyle=1;fillColor=#212529;strokeColor=#000000;fontColor=#ffffff;shadow=1;" vertex="1" parent="1" visible="0"/>
+        <mxCell id="style_sprint" value="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fontColor=#ffffff;shadow=1;strokeWidth=2;" vertex="1" parent="1" visible="0"/>
+        <mxCell id="style_wp_header" value="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;strokeWidth=1;align=center;verticalAlign=middle;" vertex="1" parent="1" visible="0"/>
+        <mxCell id="style_wp_body" value="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontColor=#333333;strokeColor=#666666;align=left;spacingLeft=4;fillColor=#ffffff;" vertex="1" parent="1" visible="0"/>
+        
+        <!-- ================= LEVEL 0: PROJECT ROOT ================= -->
+        <mxCell id="root" value="1.0 Pulse Multi-Agent Platform&#xa;Project WBS" style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;fontStyle=1;fillColor=#212529;strokeColor=#000000;fontColor=#ffffff;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="2400" y="40" width="500" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= LEVEL 1: BRANCHES ================= -->
+        <!-- X Spacing: approx 800px per branch to allow for width -->
+        
+        <!-- 1.1 Sprint 0 -->
+        <mxCell id="L1_1" value="1.1 Sprint 0: Planning&#xa;(Nov 28 - Dec 5)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fontColor=#ffffff;shadow=1;strokeWidth=2;fillColor=#6c757d;strokeColor=#495057;" vertex="1" parent="1">
+          <mxGeometry x="100" y="250" width="300" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- 1.2 Sprint 1 -->
+        <mxCell id="L1_2" value="1.2 Sprint 1: Core AI&#xa;(Dec 6 - Dec 19)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fontColor=#ffffff;shadow=1;strokeWidth=2;fillColor=#198754;strokeColor=#146c43;" vertex="1" parent="1">
+          <mxGeometry x="900" y="250" width="300" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- 1.3 Sprint 2 -->
+        <mxCell id="L1_3" value="1.3 Sprint 2: Analytics&#xa;(Dec 20 - Jan 2)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fontColor=#ffffff;shadow=1;strokeWidth=2;fillColor=#6f42c1;strokeColor=#59359a;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="250" width="300" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- 1.4 Sprint 3 -->
+        <mxCell id="L1_4" value="1.4 Sprint 3: Autonomous&#xa;(Jan 3 - Jan 16)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fontColor=#ffffff;shadow=1;strokeWidth=2;fillColor=#fd7e14;strokeColor=#c65f08;" vertex="1" parent="1">
+          <mxGeometry x="2500" y="250" width="300" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- 1.5 Infrastructure -->
+        <mxCell id="L1_5" value="1.5 Infrastructure Layer" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fontColor=#ffffff;shadow=1;strokeWidth=2;fillColor=#0d6efd;strokeColor=#0a58ca;" vertex="1" parent="1">
+          <mxGeometry x="3300" y="250" width="300" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- 1.6 AI/ML -->
+        <mxCell id="L1_6" value="1.6 AI/ML Components" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fontColor=#000000;shadow=1;strokeWidth=2;fillColor=#ffc107;strokeColor=#d39e00;" vertex="1" parent="1">
+          <mxGeometry x="4100" y="250" width="300" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- 1.7 PM -->
+        <mxCell id="L1_7" value="1.7 Project Management" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fontColor=#ffffff;shadow=1;strokeWidth=2;fillColor=#343a40;strokeColor=#212529;" vertex="1" parent="1">
+          <mxGeometry x="4900" y="250" width="300" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- CONNECT ROOT -->
+        <mxCell edge="1" parent="1" source="root" target="L1_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=3;strokeColor=#555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="root" target="L1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=3;strokeColor=#555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="root" target="L1_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=3;strokeColor=#555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="root" target="L1_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=3;strokeColor=#555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="root" target="L1_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=3;strokeColor=#555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="root" target="L1_6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=3;strokeColor=#555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="root" target="L1_7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=3;strokeColor=#555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+
+        <!-- ================= 1.1 SPRINT 0 DETAILS ================= -->
+        <mxCell id="111" value="1.1.1 Requirements Eng." style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e2e3e5;strokeColor=#adb5bd;" vertex="1" parent="1">
+          <mxGeometry x="125" y="380" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="111_c" value="1.1.1.1 Stakeholder interviews&#xa;1.1.1.2 Write 15+ detailed user stories&#xa;1.1.1.3 Story point estimation&#xa;1.1.1.4 MoSCoW prioritization&#xa;1.1.1.5 Create backlog in GitHub" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#adb5bd;" vertex="1" parent="1">
+           <mxGeometry x="125" y="420" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="112" value="1.1.2 System Architecture" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e2e3e5;strokeColor=#adb5bd;" vertex="1" parent="1">
+          <mxGeometry x="125" y="500" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="112_c" value="1.1.2.1 Design agent architecture&#xa;1.1.2.2 Define DB schema (MongoDB)&#xa;1.1.2.3 Create API specs (OpenAPI)&#xa;1.1.2.4 System integration diagram&#xa;1.1.2.5 Security arch (JWT)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#adb5bd;" vertex="1" parent="1">
+           <mxGeometry x="125" y="540" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="113" value="1.1.3 POC Development" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e2e3e5;strokeColor=#adb5bd;" vertex="1" parent="1">
+          <mxGeometry x="125" y="620" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="113_c" value="1.1.3.1 CrewAI multi-agent POC&#xa;1.1.3.2 RAG pipeline POC&#xa;1.1.3.3 Sentiment analysis POC&#xa;1.1.3.4 Docker POC&#xa;1.1.3.5 Social API POC" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#adb5bd;" vertex="1" parent="1">
+           <mxGeometry x="125" y="660" width="250" height="70" as="geometry"/>
+        </mxCell>
+        
+        <!-- NEW NODES 1.1.4, 1.1.5 -->
+        <mxCell id="114" value="1.1.4 Project Board Setup" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e2e3e5;strokeColor=#adb5bd;" vertex="1" parent="1">
+          <mxGeometry x="125" y="740" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="115" value="1.1.5 Risk Assessment" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e2e3e5;strokeColor=#adb5bd;" vertex="1" parent="1">
+          <mxGeometry x="125" y="800" width="250" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="L1_1" target="111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6c757d;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_1" target="112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6c757d;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_1" target="113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6c757d;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_1" target="114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6c757d;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_1" target="115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6c757d;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+
+        <!-- ================= 1.2 SPRINT 1 DETAILS ================= -->
+        <mxCell id="121" value="1.2.1 US-001 Agent Framework" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#d1e7dd;strokeColor=#198754;" vertex="1" parent="1">
+          <mxGeometry x="925" y="380" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="121_c" value="1.2.1.1 CrewAI install/config&#xa;1.2.1.2 Define agent roles&#xa;1.2.1.3 Agent memory system&#xa;1.2.1.4 Task orchestration engine&#xa;1.2.1.5 Agent comm protocols&#xa;1.2.1.6 Fallback mechanisms&#xa;1.2.1.7 Unit tests for agents" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#198754;" vertex="1" parent="1">
+           <mxGeometry x="925" y="420" width="250" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="122" value="1.2.2 US-002 Brand RAG" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#d1e7dd;strokeColor=#198754;" vertex="1" parent="1">
+          <mxGeometry x="925" y="520" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="122_c" value="1.2.2.1 Doc upload REST API&#xa;1.2.2.2 File parsing (PDF/DOCX)&#xa;1.2.2.3 Text chunking strategy&#xa;1.2.2.4 Embedding (Ada-002)&#xa;1.2.2.5 Pinecone setup&#xa;1.2.2.6 Semantic search + rerank&#xa;1.2.2.7 Context injection&#xa;1.2.2.8 RAG eval metrics" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#198754;" vertex="1" parent="1">
+           <mxGeometry x="925" y="560" width="250" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="123" value="1.2.3 US-003 Campaign Planner" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#d1e7dd;strokeColor=#198754;" vertex="1" parent="1">
+          <mxGeometry x="925" y="670" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="123_c" value="1.2.3.1 Campaign form UI&#xa;1.2.3.2 Campaign CRUD API&#xa;1.2.3.3 Strategist Agent impl&#xa;1.2.3.4 Calendar generation logic&#xa;1.2.3.5 Multi-platform adaptation&#xa;1.2.3.6 A/B testing suggestions" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#198754;" vertex="1" parent="1">
+           <mxGeometry x="925" y="710" width="250" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- NEW NODE 1.2.4 -->
+        <mxCell id="124" value="1.2.4 US-010 Brand DNA" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#d1e7dd;strokeColor=#198754;" vertex="1" parent="1">
+          <mxGeometry x="925" y="800" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="124_c" value="1.2.4.1 Visual identity analyzer&#xa;1.2.4.2 Linguistic style profiler&#xa;1.2.4.3 Tone-of-voice classifier&#xa;1.2.4.4 Brand consistency scorer&#xa;1.2.4.5 DNA dashboard component" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#198754;" vertex="1" parent="1">
+           <mxGeometry x="925" y="840" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="125" value="1.2.5 US-014 CI/CD Pipeline" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#d1e7dd;strokeColor=#198754;" vertex="1" parent="1">
+          <mxGeometry x="925" y="920" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="125_c" value="1.2.5.1 GitHub Actions workflows&#xa;1.2.5.2 Auto testing (pytest)&#xa;1.2.5.3 Quality gates (linting)&#xa;1.2.5.4 Docker image builds&#xa;1.2.5.5 Staging deployment&#xa;1.2.5.6 Rollback mechanisms" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#198754;" vertex="1" parent="1">
+           <mxGeometry x="925" y="960" width="250" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="L1_2" target="121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#198754;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_2" target="122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#198754;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_2" target="123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#198754;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_2" target="124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#198754;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_2" target="125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#198754;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+
+        <!-- ================= 1.3 SPRINT 2 DETAILS ================= -->
+        <mxCell id="131" value="1.3.1 US-004 Content Scheduler" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e0cffc;strokeColor=#6f42c1;" vertex="1" parent="1">
+          <mxGeometry x="1725" y="380" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="131_c" value="1.3.1.1 Drag-drop calendar UI&#xa;1.3.1.2 Optimal posting time AI&#xa;1.3.1.3 Job queue (Celery)&#xa;1.3.1.4 Auto-publish service&#xa;1.3.1.5 Timezone handling&#xa;1.3.1.6 Conflict resolution" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#6f42c1;" vertex="1" parent="1">
+           <mxGeometry x="1725" y="420" width="250" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="132" value="1.3.2 US-005 Sentiment Dash" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e0cffc;strokeColor=#6f42c1;" vertex="1" parent="1">
+          <mxGeometry x="1725" y="510" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="132_c" value="1.3.2.1 Train sentiment model&#xa;1.3.2.2 Real-time ingestion pipe&#xa;1.3.2.3 Dashboard charts&#xa;1.3.2.4 Trend analysis&#xa;1.3.2.5 Auto alert system&#xa;1.3.2.6 Comparison reports" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#6f42c1;" vertex="1" parent="1">
+           <mxGeometry x="1725" y="550" width="250" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="133" value="1.3.3 US-007 Unified Inbox" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e0cffc;strokeColor=#6f42c1;" vertex="1" parent="1">
+          <mxGeometry x="1725" y="640" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="133_c" value="1.3.3.1 Unified inbox UI&#xa;1.3.3.2 AI message priority&#xa;1.3.3.3 API polling service&#xa;1.3.3.4 Quick-reply templates&#xa;1.3.3.5 Message categorization&#xa;1.3.3.6 Conversation threading" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#6f42c1;" vertex="1" parent="1">
+           <mxGeometry x="1725" y="680" width="250" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="134" value="1.3.4 US-011 Hallucination Det." style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e0cffc;strokeColor=#6f42c1;" vertex="1" parent="1">
+          <mxGeometry x="1725" y="770" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="134_c" value="1.3.4.1 Claim extraction&#xa;1.3.4.2 Knowledge verif engine&#xa;1.3.4.3 Consistency checker&#xa;1.3.4.4 Grounding scoring&#xa;1.3.4.5 Confidence alerts&#xa;1.3.4.6 Human review flagging" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#6f42c1;" vertex="1" parent="1">
+           <mxGeometry x="1725" y="810" width="250" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="135" value="1.3.5 US-015 API Rate Limiter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#e0cffc;strokeColor=#6f42c1;" vertex="1" parent="1">
+          <mxGeometry x="1725" y="900" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="135_c" value="1.3.5.1 Token bucket algo&#xa;1.3.5.2 Priority request queue&#xa;1.3.5.3 Redis storage config&#xa;1.3.5.4 Rate limit dashboard&#xa;1.3.5.5 Graceful degradation" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#6f42c1;" vertex="1" parent="1">
+           <mxGeometry x="1725" y="940" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="L1_3" target="131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6f42c1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_3" target="132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6f42c1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_3" target="133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6f42c1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_3" target="134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6f42c1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_3" target="135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#6f42c1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+
+        <!-- ================= 1.4 SPRINT 3 DETAILS ================= -->
+        <mxCell id="141" value="1.4.1 US-006 Anomaly Det." style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#ffe5d0;strokeColor=#fd7e14;" vertex="1" parent="1">
+          <mxGeometry x="2525" y="380" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="141_c" value="1.4.1.1 Z-score algorithm&#xa;1.4.1.2 Real-time metric ingest&#xa;1.4.1.3 Alert notifications&#xa;1.4.1.4 Visualization dash&#xa;1.4.1.5 Root cause analysis" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#fd7e14;" vertex="1" parent="1">
+           <mxGeometry x="2525" y="420" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="142" value="1.4.2 US-008 Response Gen" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#ffe5d0;strokeColor=#fd7e14;" vertex="1" parent="1">
+          <mxGeometry x="2525" y="500" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="142_c" value="1.4.2.1 Context-aware gen&#xa;1.4.2.2 Brand voice matching&#xa;1.4.2.3 Personalization engine&#xa;1.4.2.4 Feedback loop&#xa;1.4.2.5 Quality scoring" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#fd7e14;" vertex="1" parent="1">
+           <mxGeometry x="2525" y="540" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="143" value="1.4.3 US-009 Trend Content" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#ffe5d0;strokeColor=#fd7e14;" vertex="1" parent="1">
+          <mxGeometry x="2525" y="620" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="143_c" value="1.4.3.1 Trend API integration&#xa;1.4.3.2 Relevance scoring&#xa;1.4.3.3 AI post generation&#xa;1.4.3.4 Content validation&#xa;1.4.3.5 Trend-brand matching" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#fd7e14;" vertex="1" parent="1">
+           <mxGeometry x="2525" y="660" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="144" value="1.4.4 US-012 Human-in-Loop" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#ffe5d0;strokeColor=#fd7e14;" vertex="1" parent="1">
+          <mxGeometry x="2525" y="740" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="144_c" value="1.4.4.1 Routing logic&#xa;1.4.4.2 Review queue UI&#xa;1.4.4.3 Approval workflow API&#xa;1.4.4.4 Learning feedback loop&#xa;1.4.4.5 Escalation mgmt" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#fd7e14;" vertex="1" parent="1">
+           <mxGeometry x="2525" y="780" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="145" value="1.4.5 US-013 Monitoring" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#ffe5d0;strokeColor=#fd7e14;" vertex="1" parent="1">
+          <mxGeometry x="2525" y="860" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="145_c" value="1.4.5.1 Prometheus metrics&#xa;1.4.5.2 Grafana dashboards&#xa;1.4.5.3 Model drift detection&#xa;1.4.5.4 A/B testing framework&#xa;1.4.5.5 Performance alerts" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#fd7e14;" vertex="1" parent="1">
+           <mxGeometry x="2525" y="900" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="L1_4" target="141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#fd7e14;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_4" target="142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#fd7e14;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_4" target="143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#fd7e14;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_4" target="144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#fd7e14;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_4" target="145" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#fd7e14;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+
+        <!-- ================= 1.5 INFRASTRUCTURE DETAILS ================= -->
+        <mxCell id="151" value="1.5.1 Backend Services" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#cfe2ff;strokeColor=#0d6efd;" vertex="1" parent="1">
+          <mxGeometry x="3325" y="380" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="151_c" value="1.5.1.1 REST API gateway&#xa;1.5.1.2 JWT auth system&#xa;1.5.1.3 Job scheduler&#xa;1.5.1.4 WebSocket updates&#xa;1.5.1.5 Swagger docs" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#0d6efd;" vertex="1" parent="1">
+           <mxGeometry x="3325" y="420" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="152" value="1.5.2 Frontend App" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#cfe2ff;strokeColor=#0d6efd;" vertex="1" parent="1">
+          <mxGeometry x="3325" y="500" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="152_c" value="1.5.2.1 Dashboard layout&#xa;1.5.2.2 Chart components&#xa;1.5.2.3 Form components&#xa;1.5.2.4 Inbox components&#xa;1.5.2.5 Settings pages" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#0d6efd;" vertex="1" parent="1">
+           <mxGeometry x="3325" y="540" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="153" value="1.5.3 Data Persistence" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#cfe2ff;strokeColor=#0d6efd;" vertex="1" parent="1">
+          <mxGeometry x="3325" y="620" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="153_c" value="1.5.3.1 MongoDB setup&#xa;1.5.3.2 Pinecone setup&#xa;1.5.3.3 Redis cache&#xa;1.5.3.4 Backup &amp; recovery" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#0d6efd;" vertex="1" parent="1">
+           <mxGeometry x="3325" y="660" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- NEW 1.5.4 & 1.5.5 -->
+        <mxCell id="154" value="1.5.4 External APIs" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#cfe2ff;strokeColor=#0d6efd;" vertex="1" parent="1">
+          <mxGeometry x="3325" y="730" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="154_c" value="1.5.4.1 Meta Graph API&#xa;1.5.4.2 LinkedIn API&#xa;1.5.4.3 Twitter/X API&#xa;1.5.4.4 OpenAI API&#xa;1.5.4.5 Webhooks" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#0d6efd;" vertex="1" parent="1">
+           <mxGeometry x="3325" y="770" width="250" height="70" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="155" value="1.5.5 DevOps &amp; Deploy" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#cfe2ff;strokeColor=#0d6efd;" vertex="1" parent="1">
+          <mxGeometry x="3325" y="850" width="250" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="L1_5" target="151" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#0d6efd;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_5" target="152" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#0d6efd;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_5" target="153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#0d6efd;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_5" target="154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#0d6efd;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_5" target="155" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#0d6efd;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- ================= 1.6 AI/ML DETAILS ================= -->
+        <mxCell id="161" value="1.6.1 AI Agents" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#fff3cd;strokeColor=#ffc107;" vertex="1" parent="1">
+          <mxGeometry x="4125" y="380" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="161_c" value="1.6.1.1 Strategist Agent&#xa;1.6.1.2 Analyst Agent&#xa;1.6.1.3 Relations Agent&#xa;1.6.1.4 Content Engine Agent" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#ffc107;" vertex="1" parent="1">
+           <mxGeometry x="4125" y="420" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="162" value="1.6.2 ML Models" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#fff3cd;strokeColor=#ffc107;" vertex="1" parent="1">
+          <mxGeometry x="4125" y="490" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="162_c" value="1.6.2.1 Sentiment Model&#xa;1.6.2.2 NER Model&#xa;1.6.2.3 Voice Scorer&#xa;1.6.2.4 Anomaly Detector" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#ffc107;" vertex="1" parent="1">
+           <mxGeometry x="4125" y="530" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="163" value="1.6.3 LLM Integration" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#fff3cd;strokeColor=#ffc107;" vertex="1" parent="1">
+          <mxGeometry x="4125" y="600" width="250" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="163_c" value="1.6.3.1 Prompt templates&#xa;1.6.3.2 RAG pipeline&#xa;1.6.3.3 Response caching&#xa;1.6.3.4 Token cost opt" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;align=left;spacingLeft=4;fillColor=#ffffff;strokeColor=#ffc107;" vertex="1" parent="1">
+           <mxGeometry x="4125" y="640" width="250" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- NEW 1.6.4 -->
+        <mxCell id="164" value="1.6.4 KB Management" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#fff3cd;strokeColor=#ffc107;" vertex="1" parent="1">
+          <mxGeometry x="4125" y="710" width="250" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="L1_6" target="161" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#ffc107;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_6" target="162" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#ffc107;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_6" target="163" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#ffc107;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_6" target="164" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#ffc107;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- ================= 1.7 PM DETAILS (NEW) ================= -->
+        <mxCell id="171" value="1.7.1 Sprint Planning" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#343a40;strokeColor=#212529;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="4925" y="380" width="250" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="172" value="1.7.2 Documentation" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#343a40;strokeColor=#212529;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="4925" y="440" width="250" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="173" value="1.7.3 QA" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#343a40;strokeColor=#212529;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="4925" y="500" width="250" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="L1_7" target="171" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#343a40;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_7" target="172" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#343a40;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="L1_7" target="173" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1;strokeColor=#343a40;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

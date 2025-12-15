@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pulse-backend"
+version = "0.1.0"
+description = "Pulse Platform - AI-Powered Multi-Agent Social Media Platform Backend API"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+authors = [
+    {name = "Pulse Team", email = "team@pulse-platform.dev"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: FastAPI",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+]
+keywords = ["fastapi", "api", "social-media", "ai", "multi-agent"]
+
+dependencies = [
+    "fastapi==0.115.0",
+    "uvicorn[standard]==0.32.0",
+    "pydantic==2.10.0",
+    "pydantic-settings==2.6.0",
+    "loguru==0.7.2",
+    "httpx==0.27.0",
+    "python-dotenv==1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.0",
+    "pytest-asyncio==0.24.0",
+    "ruff==0.8.0",
+    "mypy==1.13.0",
+    "pre-commit==4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/pulse-platform/pulse-multi-agent-platform"
+Documentation = "https://github.com/pulse-platform/pulse-multi-agent-platform/tree/main/docs"
+Repository = "https://github.com/pulse-platform/pulse-multi-agent-platform"
+Issues = "https://github.com/pulse-platform/pulse-multi-agent-platform/issues"
+
+[project.scripts]
+pulse-api = "app.main:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+# Pytest Configuration
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+# Ruff Configuration (Linter + Formatter)
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+exclude = ["venv", ".venv", "__pycache__", ".git"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# MyPy Configuration
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+exclude = ["venv", ".venv", "tests"]
