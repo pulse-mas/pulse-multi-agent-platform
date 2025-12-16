@@ -18,10 +18,14 @@ class Settings(BaseSettings):
     HOST: str = Field(default="0.0.0.0", description="Server host")
     PORT: int = Field(default=8000, description="Server port")
 
-    # Database configuration (for Sprint 1)
+    # Database configuration
     MONGODB_URI: str = Field(
-        default="mongodb://localhost:27017/pulse",
+        default="mongodb://localhost:27017",
         description="MongoDB connection URI"
+    )
+    MONGODB_DB_NAME: str = Field(
+        default="pulse",
+        description="MongoDB database name"
     )
 
     # Cache configuration (for Sprint 1)
@@ -30,17 +34,39 @@ class Settings(BaseSettings):
         description="Redis connection URL"
     )
 
-    # AI/LLM APIs
-    OPENAI_API_KEY: str = Field(
+    # Reddit API
+    REDDIT_CLIENT_ID: str = Field(
         default="",
-        description="OpenAI API key for LLM integration"
+        description="Reddit API client ID"
     )
-    OPENAI_API_BASE: str = Field(
-        default="https://api.openai.com/v1",
-        description="OpenAI API base URL"
+    REDDIT_CLIENT_SECRET: str = Field(
+        default="",
+        description="Reddit API client secret"
+    )
+    REDDIT_USER_AGENT: str = Field(
+        default="PulsePlatform/1.0",
+        description="Reddit API user agent"
     )
 
-    # CORS configuration (accepts either list or comma-separated string)
+    # LLM Configuration (GitHub Models or OpenAI)
+    GITHUB_TOKEN: str = Field(
+        default="",
+        description="GitHub token for GitHub Models API"
+    )
+    OPENAI_API_KEY: str = Field(
+        default="",
+        description="OpenAI API key (fallback if GITHUB_TOKEN not set)"
+    )
+    LLM_MODEL: str = Field(
+        default="gpt-4o",
+        description="LLM model name"
+    )
+    LLM_BASE_URL: str = Field(
+        default="https://models.inference.ai.azure.com",
+        description="LLM API base URL (GitHub Models endpoint)"
+    )
+
+    # CORS configuration
     CORS_ORIGINS: str = Field(
         default="http://localhost:3000,http://localhost:5173",
         description="Allowed CORS origins (comma-separated)"
@@ -66,3 +92,4 @@ class Settings(BaseSettings):
 
 # Global settings instance
 settings = Settings()
+

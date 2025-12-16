@@ -7,7 +7,8 @@ from app.config import settings
 from app.utils.logging import logger, setup_logging
 from app.middleware.cors import setup_cors
 from app.exceptions.handlers import setup_exception_handlers
-from app.routers import health, status
+from app.routers import health, status, product_dna
+from app.db.mongodb import mongodb
 
 
 @asynccontextmanager
@@ -26,11 +27,22 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     logger.info(f"Server: {settings.HOST}:{settings.PORT}")
     logger.info("=" * 80)
     
+    # Connect to MongoDB
+    try:
+        await mongodb.connect()
+        logger.info("MongoDB connected successfully")
+    except Exception as e:
+        logger.warning(f"MongoDB connection failed: {e}. Some features may be unavailable.")
+    
     yield
     
     # Shutdown
     logger.info("=" * 80)
     logger.info(f"Shutting down {settings.APP_NAME}")
+    
+    # Disconnect from MongoDB
+    await mongodb.disconnect()
+    
     logger.info("=" * 80)
 
 
@@ -69,6 +81,7 @@ def create_app() -> FastAPI:
     # Register routers
     app.include_router(health.router)
     app.include_router(status.router)
+    app.include_router(product_dna.router)
     
     logger.info("FastAPI application created successfully")
     
@@ -88,5 +101,6 @@ async def root():
         "version": settings.APP_VERSION,
         "docs": "/docs",
         "health": "/health",
-        "status": "/api/v1/status"
+        "status": "/api/v1/status",
+        "product_dna": "/api/v1/product-dna"
     }
