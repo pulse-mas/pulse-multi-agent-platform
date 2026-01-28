@@ -1,14 +1,15 @@
 """Tests for Product DNA service."""
 
-import pytest
-from datetime import datetime, UTC
+from datetime import UTC, datetime
 from unittest.mock import AsyncMock, MagicMock, patch
+
+import pytest
 
 from app.models.reddit import (
     CollectionRequest,
-    Sentiment,
     EnrichedPost,
     PostMetadata,
+    Sentiment,
 )
 
 
@@ -23,10 +24,10 @@ class TestProductDNAService:
             return_value=MagicMock(upserted_id="id1", modified_count=0)
         )
         mock_collection.create_index = AsyncMock()
-        
+
         mock_db = MagicMock()
         mock_db.__getitem__ = MagicMock(return_value=mock_collection)
-        
+
         with patch("app.services.product_dna.mongodb") as mock_mongo:
             mock_mongo.get_collection.return_value = mock_collection
             mock_mongo.db = mock_db
@@ -79,11 +80,7 @@ class TestProductDNAService:
 
         service = ProductDNAService(reddit=mock_reddit, llm=mock_llm)
 
-        request = CollectionRequest(
-            keywords=["social media"],
-            subreddits=["marketing"],
-            limit=10
-        )
+        request = CollectionRequest(keywords=["social media"], subreddits=["marketing"], limit=10)
 
         result = await service.collect_and_enrich(request)
 
@@ -100,22 +97,22 @@ class TestProductDNAService:
         from app.services.product_dna import ProductDNAService
 
         service = ProductDNAService()
-        
+
         # Mock the collection's find method chain for query execution
         mock_cursor_result = []
-        
+
         async def mock_async_iter():
             for item in mock_cursor_result:
                 yield item
-        
+
         mock_chain = MagicMock()
-        mock_chain.skip.return_value.limit.return_value.sort.return_value.__aiter__ = lambda self: mock_async_iter()
+        mock_chain.skip.return_value.limit.return_value.sort.return_value.__aiter__ = (
+            lambda self: mock_async_iter()
+        )
         mock_mongodb.find.return_value = mock_chain
 
         posts = await service.get_product_dna(
-            sentiment=Sentiment.POSITIVE,
-            subreddit="marketing",
-            limit=50
+            sentiment=Sentiment.POSITIVE, subreddit="marketing", limit=50
         )
 
         # Verify filter was applied
@@ -154,7 +151,7 @@ class TestProductDNAService:
 
         assert stored == 1
         mock_mongodb.update_one.assert_called_once()
-        
+
         # Verify upsert=True was used
         call_kwargs = mock_mongodb.update_one.call_args[1]
         assert call_kwargs["upsert"] is True
@@ -199,10 +196,7 @@ class TestProductDNAService:
 
         service = ProductDNAService(reddit=mock_reddit, llm=mock_llm)
 
-        request = CollectionRequest(
-            keywords=["test"],
-            limit=10
-        )
+        request = CollectionRequest(keywords=["test"], limit=10)
 
         result = await service.collect_and_enrich(request)
 

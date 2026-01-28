@@ -1,7 +1,5 @@
 """Tests for Reddit integration."""
 
-import pytest
-from datetime import datetime
 from unittest.mock import MagicMock, patch
 
 
@@ -32,18 +30,14 @@ class TestRedditSearchTool:
             mock_reddit.return_value.subreddit.return_value = mock_subreddit
 
             from app.integrations.reddit import RedditSearchTool
-            
+
             tool = RedditSearchTool(
-                client_id="test_id",
-                client_secret="test_secret",
-                user_agent="test_agent"
+                client_id="test_id", client_secret="test_secret", user_agent="test_agent"
             )
             tool._reddit = mock_reddit.return_value
-            
+
             posts = tool.search_subreddits(
-                keywords=["test query"],
-                subreddits=["marketing"],
-                limit=10
+                keywords=["test query"], subreddits=["marketing"], limit=10
             )
 
             assert len(posts) == 1
@@ -60,18 +54,14 @@ class TestRedditSearchTool:
             mock_reddit.return_value.subreddit.return_value = mock_subreddit
 
             from app.integrations.reddit import RedditSearchTool
-            
+
             tool = RedditSearchTool(
-                client_id="test_id",
-                client_secret="test_secret",
-                user_agent="test_agent"
+                client_id="test_id", client_secret="test_secret", user_agent="test_agent"
             )
             tool._reddit = mock_reddit.return_value
-            
+
             posts = tool.search_subreddits(
-                keywords=["nonexistent query xyz"],
-                subreddits=["marketing"],
-                limit=10
+                keywords=["nonexistent query xyz"], subreddits=["marketing"], limit=10
             )
 
             assert len(posts) == 0
@@ -93,14 +83,12 @@ class TestRedditSearchTool:
         mock_submission.is_self = False
 
         from app.integrations.reddit import RedditSearchTool
-        
+
         tool = RedditSearchTool(
-            client_id="test_id",
-            client_secret="test_secret",
-            user_agent="test_agent"
+            client_id="test_id", client_secret="test_secret", user_agent="test_agent"
         )
-        
+
         post_data = tool._extract_post_data(mock_submission)
-        
+
         assert post_data["author"] == "[deleted]"
         assert post_data["external_url"] == "https://example.com"

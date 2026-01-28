@@ -2,19 +2,19 @@
 
 import asyncio
 from datetime import datetime
-from typing import Optional
+
 from loguru import logger
 
-from app.integrations.reddit import reddit_tool, RedditSearchTool
-from app.integrations.llm import llm_service, LLMService
 from app.db.mongodb import mongodb
+from app.integrations.llm import LLMService, llm_service
+from app.integrations.reddit import RedditSearchTool, reddit_tool
 from app.models.reddit import (
-    EnrichedPost,
-    PostMetadata,
-    Sentiment,
     CollectionRequest,
     CollectionResponse,
+    EnrichedPost,
+    PostMetadata,
     ProductDNAStats,
+    Sentiment,
 )
 
 
@@ -25,12 +25,12 @@ class ProductDNAService:
 
     def __init__(
         self,
-        reddit: Optional[RedditSearchTool] = None,
-        llm: Optional[LLMService] = None,
+        reddit: RedditSearchTool | None = None,
+        llm: LLMService | None = None,
     ):
         """
         Initialize Product DNA service.
-        
+
         Args:
             reddit: Reddit search tool instance
             llm: LLM service instance
@@ -49,10 +49,10 @@ class ProductDNAService:
     ) -> CollectionResponse:
         """
         Collect posts from Reddit and enrich with LLM analysis.
-        
+
         Args:
             request: Collection request parameters
-            
+
         Returns:
             CollectionResponse with results
         """
@@ -65,7 +65,7 @@ class ProductDNAService:
         try:
             # Step 1: Collect from Reddit
             logger.info(f"Collecting posts for keywords: {request.keywords}")
-            
+
             raw_posts = self.reddit.search_subreddits(
                 keywords=request.keywords,
                 subreddits=request.subreddits,
@@ -141,7 +141,7 @@ class ProductDNAService:
     async def _store_posts(self, posts: list[EnrichedPost]) -> int:
         """Store enriched posts in MongoDB with upsert."""
         stored_count = 0
-        
+
         for post in posts:
             try:
                 # Use upsert to avoid duplicates
@@ -159,32 +159,32 @@ class ProductDNAService:
 
     async def get_product_dna(
         self,
-        sentiment: Optional[Sentiment] = None,
-        subreddit: Optional[str] = None,
+        sentiment: Sentiment | None = None,
+        subreddit: str | None = None,
         limit: int = 50,
         skip: int = 0,
     ) -> list[EnrichedPost]:
         """
         Retrieve stored Product DNA records.
-        
+
         Args:
             sentiment: Filter by sentiment
             subreddit: Filter by subreddit
             limit: Maximum records to return
             skip: Number of records to skip (for pagination)
-            
+
         Returns:
             List of enriched posts
         """
         query = {}
-        
+
         if sentiment:
             query["sentiment"] = sentiment.value
         if subreddit:
             query["metadata.subreddit"] = subreddit
 
         cursor = self.collection.find(query).skip(skip).limit(limit).sort("enriched_at", -1)
-        
+
         posts = []
         async for doc in cursor:
             doc.pop("_id", None)  # Remove MongoDB _id
@@ -197,28 +197,21 @@ class ProductDNAService:
         total = await self.collection.count_documents({})
 
         # Aggregate by sentiment
-        sentiment_pipeline = [
-            {"$group": {"_id": "$sentiment", "count": {"$sum": 1}}}
-        ]
+        sentiment_pipeline = [{"$group": {"_id": "$sentiment", "count": {"$sum": 1}}}]
         sentiment_cursor = self.collection.aggregate(sentiment_pipeline)
         by_sentiment = {}
         async for doc in sentiment_cursor:
             by_sentiment[doc["_id"]] = doc["count"]
 
         # Aggregate by subreddit
-        subreddit_pipeline = [
-            {"$group": {"_id": "$metadata.subreddit", "count": {"$sum": 1}}}
-        ]
+        subreddit_pipeline = [{"$group": {"_id": "$metadata.subreddit", "count": {"$sum": 1}}}]
         subreddit_cursor = self.collection.aggregate(subreddit_pipeline)
         by_subreddit = {}
         async for doc in subreddit_cursor:
             by_subreddit[doc["_id"]] = doc["count"]
 
         # Get last collection time
-        last_doc = await self.collection.find_one(
-            {},
-            sort=[("enriched_at", -1)]
-        )
+        last_doc = await self.collection.find_one({}, sort=[("enriched_at", -1)])
         last_collection = last_doc.get("enriched_at") if last_doc else None
 
         return ProductDNAStats(

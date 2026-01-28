@@ -1,21 +1,23 @@
 """FastAPI application entry point."""
 
+from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
-from typing import AsyncGenerator
+
 from fastapi import FastAPI
+
 from app.config import settings
-from app.utils.logging import logger, setup_logging
-from app.middleware.cors import setup_cors
-from app.exceptions.handlers import setup_exception_handlers
-from app.routers import health, status, product_dna
 from app.db.mongodb import mongodb
+from app.exceptions.handlers import setup_exception_handlers
+from app.middleware.cors import setup_cors
+from app.routers import health, product_dna, status
+from app.utils.logging import logger, setup_logging
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     """
     Lifespan context manager for startup and shutdown events.
-    
+
     Args:
         app: FastAPI application instance
     """
@@ -26,36 +28,36 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     logger.info(f"Debug mode: {settings.DEBUG}")
     logger.info(f"Server: {settings.HOST}:{settings.PORT}")
     logger.info("=" * 80)
-    
+
     # Connect to MongoDB
     try:
         await mongodb.connect()
         logger.info("MongoDB connected successfully")
     except Exception as e:
         logger.warning(f"MongoDB connection failed: {e}. Some features may be unavailable.")
-    
+
     yield
-    
+
     # Shutdown
     logger.info("=" * 80)
     logger.info(f"Shutting down {settings.APP_NAME}")
-    
+
     # Disconnect from MongoDB
     await mongodb.disconnect()
-    
+
     logger.info("=" * 80)
 
 
 def create_app() -> FastAPI:
     """
     Application factory for creating FastAPI instances.
-    
+
     Returns:
         FastAPI: Configured FastAPI application
     """
     # Setup logging first
     setup_logging()
-    
+
     # Create FastAPI app
     app = FastAPI(
         title=settings.APP_NAME,
@@ -69,22 +71,22 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
         docs_url="/docs",
         redoc_url="/redoc",
-        openapi_url="/openapi.json"
+        openapi_url="/openapi.json",
     )
-    
+
     # Setup middleware
     setup_cors(app)
-    
+
     # Setup exception handlers
     setup_exception_handlers(app)
-    
+
     # Register routers
     app.include_router(health.router)
     app.include_router(status.router)
     app.include_router(product_dna.router)
-    
+
     logger.info("FastAPI application created successfully")
-    
+
     return app
 
 
@@ -102,5 +104,5 @@ async def root():
         "docs": "/docs",
         "health": "/health",
         "status": "/api/v1/status",
-        "product_dna": "/api/v1/product-dna"
+        "product_dna": "/api/v1/product-dna",
     }

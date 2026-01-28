@@ -2,13 +2,15 @@
 
 import sys
 from pathlib import Path
+
 from loguru import logger
+
 from app.config import settings
 
 
 def setup_logging() -> None:
     """Configure Loguru logging for the application."""
-    
+
     # Remove default handler
     logger.remove()
 
@@ -27,14 +29,14 @@ def setup_logging() -> None:
         level=settings.LOG_LEVEL,
         colorize=True,
         backtrace=True,
-        diagnose=True
+        diagnose=True,
     )
 
     # Add file handler for production
     if settings.APP_ENV == "production":
         log_dir = Path("logs")
         log_dir.mkdir(exist_ok=True)
-        
+
         # JSON logging for production
         logger.add(
             log_dir / "pulse_{time:YYYY-MM-DD}.log",

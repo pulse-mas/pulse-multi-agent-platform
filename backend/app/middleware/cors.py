@@ -2,6 +2,7 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 from app.config import settings
 from app.utils.logging import logger
 
@@ -9,7 +10,7 @@ from app.utils.logging import logger
 def setup_cors(app: FastAPI) -> None:
     """
     Configure CORS middleware for the FastAPI application.
-    
+
     Args:
         app: FastAPI application instance
     """

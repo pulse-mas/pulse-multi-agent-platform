@@ -1,8 +1,7 @@
 """MongoDB database connection and utilities."""
 
-from typing import Optional
-from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
 from loguru import logger
+from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
 
 from app.config import settings
 
@@ -11,8 +10,8 @@ class MongoDB:
     """MongoDB connection manager using Motor (async driver)."""
 
     def __init__(self):
-        self._client: Optional[AsyncIOMotorClient] = None
-        self._db: Optional[AsyncIOMotorDatabase] = None
+        self._client: AsyncIOMotorClient | None = None
+        self._db: AsyncIOMotorDatabase | None = None
 
     async def connect(self) -> None:
         """Establish connection to MongoDB."""
@@ -20,11 +19,11 @@ class MongoDB:
             try:
                 self._client = AsyncIOMotorClient(settings.MONGODB_URI)
                 self._db = self._client[settings.MONGODB_DB_NAME]
-                
+
                 # Verify connection
-                await self._client.admin.command('ping')
+                await self._client.admin.command("ping")
                 logger.info(f"Connected to MongoDB: {settings.MONGODB_DB_NAME}")
-                
+
             except Exception as e:
                 logger.error(f"Failed to connect to MongoDB: {e}")
                 raise

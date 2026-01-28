@@ -1,7 +1,8 @@
 """Tests for LLM integration."""
 
-import pytest
 from unittest.mock import AsyncMock, MagicMock, patch
+
+import pytest
 
 
 class TestLLMService:
@@ -26,7 +27,7 @@ class TestLLMService:
 
             result = await service.analyze_sentiment(
                 title="Great product, highly recommend!",
-                body="This is amazing, absolutely love it."
+                body="This is amazing, absolutely love it.",
             )
 
             assert result.sentiment == Sentiment.POSITIVE
@@ -50,7 +51,7 @@ class TestLLMService:
 
             result = await service.analyze_sentiment(
                 title="Terrible experience, avoid!",
-                body="Worst product ever, complete waste of money."
+                body="Worst product ever, complete waste of money.",
             )
 
             assert result.sentiment == Sentiment.NEGATIVE
@@ -73,8 +74,7 @@ class TestLLMService:
             service._client = mock_client
 
             result = await service.analyze_sentiment(
-                title="Product update released",
-                body="New version is now available for download."
+                title="Product update released", body="New version is now available for download."
             )
 
             assert result.sentiment == Sentiment.NEUTRAL
@@ -84,7 +84,9 @@ class TestLLMService:
         """Test summary generation is within word limit."""
         mock_response = MagicMock()
         mock_response.choices = [MagicMock()]
-        mock_response.choices[0].message.content = "User asks for social media marketing tips for small business growth."
+        mock_response.choices[
+            0
+        ].message.content = "User asks for social media marketing tips for small business growth."
 
         with patch("app.integrations.llm.AsyncOpenAI") as mock_openai:
             mock_client = AsyncMock()
@@ -98,7 +100,7 @@ class TestLLMService:
 
             summary = await service.generate_summary(
                 title="How to grow my small business on social media?",
-                body="I have a small bakery and want to increase my online presence..."
+                body="I have a small bakery and want to increase my online presence...",
             )
 
             # Check summary is within word limit (roughly)
@@ -129,11 +131,7 @@ class TestLLMService:
             service = LLMService(api_key="test_key")
             service._client = mock_client
 
-            post = {
-                "post_id": "test123",
-                "title": "Test Title",
-                "body": "Test body content"
-            }
+            post = {"post_id": "test123", "title": "Test Title", "body": "Test body content"}
 
             enriched = await service.enrich_post(post)
 
@@ -146,9 +144,7 @@ class TestLLMService:
         """Test that errors in sentiment analysis default to neutral."""
         with patch("app.integrations.llm.AsyncOpenAI") as mock_openai:
             mock_client = AsyncMock()
-            mock_client.chat.completions.create = AsyncMock(
-                side_effect=Exception("API Error")
-            )
+            mock_client.chat.completions.create = AsyncMock(side_effect=Exception("API Error"))
             mock_openai.return_value = mock_client
 
             from app.integrations.llm import LLMService, Sentiment
@@ -156,10 +152,7 @@ class TestLLMService:
             service = LLMService(api_key="test_key")
             service._client = mock_client
 
-            result = await service.analyze_sentiment(
-                title="Test",
-                body="Test"
-            )
+            result = await service.analyze_sentiment(title="Test", body="Test")
 
             # Should default to neutral on error
             assert result.sentiment == Sentiment.NEUTRAL
